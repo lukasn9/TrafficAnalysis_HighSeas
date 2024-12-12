@@ -1,0 +1,206 @@
+QMainWindow#main_window {
+    background-color: #1e1e1e;
+}
+
+QSpinBox#freq_inp_disabled {
+    background-color: #3D3D3D;
+    color: #373737;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    width: 45px;
+    height: 35px;
+}
+
+QSpinBox#freq_inp_disabled::down-button, QSpinBox#freq_inp_disabled::up-button {
+    width: 0px;
+    height: 0px;
+}
+
+QPushButton#process_live_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton#process_live_button:hover {
+    background-color: #5A5A5A;
+}
+
+QPushButton#process_video_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton#process_video_button:hover {
+    background-color: #5A5A5A;
+}
+
+QPushButton#website_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 60px;
+    height: 30px;
+}
+
+QPushButton#history_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 70px;
+    height: 30px;
+}
+
+QPushButton#save_intersection_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+}
+
+QPushButton#choose_intersection_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+}
+
+QPushButton#website_button:hover {
+    background-color: #5A5A5A;
+}
+
+QPushButton#select_file_button {
+    background-color: #3D3D3D;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton#select_file_button:hover {
+    background-color: #5A5A5A;
+}
+
+QSpinBox#freq_inp {
+    background-color: #3D3D3D;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    height: 35px;
+    font-weight: bold;
+}
+
+QDateTimeEdit#end_inp, QDateTimeEdit#start_inp {
+    background-color: #3D3D3D;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    width: 150px;
+    height: 25px;
+    font-weight: bold;
+}
+
+QDateTimeEdit#end_inp::down-arrow, QDateTimeEdit#start_inp::down-arrow {
+    image: url(./Data/icons/arrow.png);
+    width: 15px;
+    height: 15px;
+    border: none;
+    outline: none;
+}
+
+QDateTimeEdit#end_inp::down-button, QDateTimeEdit#start_inp::down-button {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+QSpinBox#freq_inp::down-button, QSpinBox#freq_inp::up-button,
+QDoubleSpinBox#end_inp::down-button, QDoubleSpinBox#end_inp::up-button,
+QDoubleSpinBox#start_inp::down-button, QDoubleSpinBox#start_inp::up-button {
+    width: 0px;
+    height: 0px;
+}
+
+QComboBox#modelSelector {
+    background-color: #3D3D3D;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 3px;
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+QComboBox#modelSelector::drop-down {
+    font-size: 10px;
+}
+
+QComboBox#modelSelector::drop-down:button {
+    border: none;
+}
+
+QComboBox#modelSelector::down-arrow {
+    image: url(./Data/icons/arrow.png);
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+
+QPushButton#history_item, QPushButton#intersection_item {
+    background-color: #3D3D3D;
+    border-radius: 5px;
+}
+
+QPushButton#back_button {
+    padding: 50px;
+    width: 100px;
+}
+
+QLabel#history_name, QLabel#history_thumbnail_label, QLabel#history_time, QLabel#intersection_save_name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+QLabel#history_time {
+    margin-right: 10px;
+}
+
+QLabel#history_name {
+    margin-left: 10px;
+}
