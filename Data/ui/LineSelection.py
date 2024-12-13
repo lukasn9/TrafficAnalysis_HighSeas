@@ -10,7 +10,9 @@ from ..ui.VideoViewer import VideoViewer
 from ..ui.Calendar import Calendar
 from ..ui.IntersectionSelector import IntersectionSelector
 from ..ui.IntersectionSavePopup import IntersectionSavePopup
+from ..ui.SelectIntersection import SelectIntersection
 from Data.core.Saving import save_lines
+
 class LineSelectionView(QWidget):
     def __init__(self, back_callback, frequency_input_callback, set_image_callback, frame_count, fps, local_analysis, live_analysis,self_main):
         super().__init__()
@@ -125,14 +127,14 @@ class LineSelectionView(QWidget):
 
         main_layout.addLayout(content_layout, 4)
 
-
-
         self_main.local_analysis = check_internet_conn(frequency_input)
 
         if self_main.local_analysis:
             label.setStyleSheet("color: #373737; font-size: 14px; font-weight: bold;")
         else:
             label.setStyleSheet("color: white; font-size: 14px; font-weight: bold;")
+
+        self.showSelectIntersectionPopup(self_main)
 
     def changeModel(self, modelSelector, self_main):
         if modelSelector.currentText() == "Quick Analysis":
@@ -166,17 +168,22 @@ class LineSelectionView(QWidget):
 
     def showIntersectionSelector(self, self_main):
         self.intersectionSelector = IntersectionSelector(self_main)
-        if self.intersectionSelector.exec() == QDialog.Accepted:  # Wait for the dialog to close
-            # Retrieve the value from the dialog
+        if self.intersectionSelector.exec() == QDialog.Accepted:
             self_main.set_lines(self.intersectionSelector.getSelectedValue())
         else:
             print("Dialog canceled")
 
     def showIntersectionSavePopup(self, self_main):
         self.intersectionSavePopup = IntersectionSavePopup(self_main)
-        if self.intersectionSavePopup.exec() == QDialog.Accepted:  # Wait for the dialog to close
-            # Retrieve the value from the dialog
+        if self.intersectionSavePopup.exec() == QDialog.Accepted:
             self_main.save_selected_lines(self.intersectionSavePopup.getSelectedValue()[0], self.intersectionSavePopup.getSelectedValue()[1])
+        else:
+            print("Dialog canceled")
+
+    def showSelectIntersectionPopup(self, self_main):
+        self.selectIntersectionPopup = SelectIntersection(self_main)
+        if self.selectIntersectionPopup.exec() == QDialog.Accepted:
+            pass
         else:
             print("Dialog canceled")
 

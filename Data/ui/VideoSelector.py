@@ -12,7 +12,7 @@ class VideoSelectorView(QWidget):
     def initUI(self, show_line_selector_callback, show_mode_selector_callback, set_video_data, self_main):
         self_main.start_enabled = False
         self.base_path = os.path.dirname(os.path.abspath(__file__))
-        
+
         main_layout = QHBoxLayout(self)
         content_layout = QVBoxLayout()
 

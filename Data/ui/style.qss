@@ -204,3 +204,15 @@ QLabel#history_time {
 QLabel#history_name {
     margin-left: 10px;
 }
+
+QPushButton#create_button, QPushButton#show_button, QPushButton#select_back_button, QPushButton#select_create_button {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #3D3D3D;
+    border-radius: 5px;
+}
+
+QLabel#input_label {
+    font-weight: bold;
+    font-size: 18px;
+}
